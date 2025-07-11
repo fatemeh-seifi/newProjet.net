@@ -16,7 +16,7 @@ namespace consoleApp
             Console.WriteLine(sum.Sum());
             Number numbers = Number.nim1;
             Console.WriteLine((int)numbers);
-             // while 
+            //  while 
             int num=5;
             while (num>0)
             {
@@ -25,7 +25,7 @@ namespace consoleApp
             }
             Console.WriteLine("عملیات به پایان رسید" );
             string? action;
-            //do/while
+            // do/while
             do
             {
                 Console.Write("Enter first number: ");
@@ -82,6 +82,18 @@ namespace consoleApp
 
             } while (action != "exit");
            
-        }
+        OverLoading m1=new OverLoading("Eli","seifi",21);
+        TestClass m2=new TestClass();
+        ChildTestClass m3=new ChildTestClass();
+        // testCalss1 m4=new testCalss1();
+        m1.FullInfo();
+        m2.getName();
+        m3.getData();
+       Console.WriteLine(m1.FullInfo("fatemeh","seifi"));
+       TestClass testt1=new TestClass();
+       testt1.getName();
+       //MyClass. Methos Name()/Field Name in static
+        Console.WriteLine(testCalss1.Sum(100,1)); 
+        } 
     }
 }
