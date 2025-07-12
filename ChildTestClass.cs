@@ -5,6 +5,7 @@ namespace consoleApp.testForInterface
         
         public void getData(){
           Console.WriteLine(Year);
+          Console.WriteLine(clr);
           Console.WriteLine(seyHi());
         }
     }
