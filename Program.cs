@@ -117,9 +117,13 @@ namespace consoleApp
         Console.WriteLine(obj);
         MyClass1 ts=new MyClass1();
         //partial
-        Console.WriteLine(ts.sum(5,500));
-        Console.WriteLine(ts.minus(5,500));
-        
+        // Console.WriteLine(ts.sum(5,500));
+        // Console.WriteLine(ts.minus(5,500));
+        Ts1 testCat=new Ts1();
+        Logger Logger=new Logger();
+        testCat.getDataForCar();
+        Logger.Log("HIIII WELCOME To This Page");
+        // ts.Log("slam");
         } 
             
     }

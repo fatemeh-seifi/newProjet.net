@@ -6,6 +6,7 @@ namespace consoleApp.testForInterface
         public int sum(int a,int b){
           return a+b;
         }
+        
     }
     
 }
