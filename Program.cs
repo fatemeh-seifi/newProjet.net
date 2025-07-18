@@ -124,6 +124,15 @@ namespace consoleApp
         testCat.getDataForCar();
         Logger.Log("HIIII WELCOME To This Page");
         // ts.Log("slam");
+        // Logg getData1=Logg.GetLogger();
+        // Logg getData2=Logg.GetLogger();
+        // Logg getData3=Logg.Instance;
+        Logg getData3=Logg.Instance;
+        Logg getData4=Logg.Instance;
+        // Console.WriteLine(getData1.GetHashCode());
+        // Console.WriteLine(getData2.GetHashCode());
+        Console.WriteLine(getData3.GetHashCode());
+        Console.WriteLine(getData4.GetHashCode());
         } 
             
     }
