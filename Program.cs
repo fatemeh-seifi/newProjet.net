@@ -129,6 +129,12 @@ namespace consoleApp
         // Logg getData3=Logg.Instance;
         Logg getData3=Logg.Instance;
         Logg getData4=Logg.Instance;
+      User getData5 = new User.Builder()
+        .SetName("Elly")
+        .SetLastName("seyfi")
+        .SetAddress("...")
+        .Build();
+        Console.WriteLine(getData5.name + " "+ getData5.lastName+" " + getData5.Adrress);
         // Console.WriteLine(getData1.GetHashCode());
         // Console.WriteLine(getData2.GetHashCode());
         Console.WriteLine(getData3.GetHashCode());
