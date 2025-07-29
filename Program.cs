@@ -139,6 +139,9 @@ namespace consoleApp
         // Console.WriteLine(getData2.GetHashCode());
         Console.WriteLine(getData3.GetHashCode());
         Console.WriteLine(getData4.GetHashCode());
+        OldPaymentSystem oldSystem=new OldPaymentSystem();
+        INewPaymentSystem newSystem=new PaymentAdapter(oldSystem);
+        newSystem.Pay("salam",1555);
         } 
             
     }
