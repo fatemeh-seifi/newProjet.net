@@ -142,6 +142,15 @@ namespace consoleApp
         OldPaymentSystem oldSystem=new OldPaymentSystem();
         INewPaymentSystem newSystem=new PaymentAdapter(oldSystem);
         newSystem.Pay("salam",1555);
+        News newsMsg=new News();
+        UserObserver user1=new UserObserver("fatemeh");
+        UserObserver user2=new UserObserver("zahra");
+        UserObserver user3=new UserObserver("Mary");
+        newsMsg.Add(user1);
+        newsMsg.Add(user2);
+        newsMsg.Add(user3);
+        user2.Update("ok");
+        newsMsg.AddNews("received Msg");
         } 
             
     }
