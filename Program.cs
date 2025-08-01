@@ -1,5 +1,5 @@
 ﻿using consoleApp.testForInterface;
-
+using MyConsoleApp.Calculations;
 namespace consoleApp
 {
     class Program
@@ -81,78 +81,87 @@ namespace consoleApp
             //     }
 
             // } while (action != "exit");
-           
-        OverLoading m1=new OverLoading("Eli","seifi",21);
-        TestClass m2=new TestClass();
-        ChildTestClass m3=new ChildTestClass();
-        // testCalss1 m4=new testCalss1();
-        m1.FullInfo();
-        m2.getName();
-        m3.getData();
-       Console.WriteLine(m1.FullInfo("fatemeh","seifi"));
-       TestClass testt1=new TestClass();
-       testt1.getName();
-       //MyClass. Methos Name()/Field Name in static
-        Console.WriteLine(testCalss1.Sum(100,1)); 
-        //Property
-        testt1.Speed=500;
-        Console.WriteLine(testt1.Speed);
-        //Generic
-        List<int> number=new List<int>();
-        number.Add(10);
-        number.Add(20);
-        number.Add(30);
-        number.Add(40);
-        number.Add(50);
-        foreach (int item in number)
-        {
-            // Console.WriteLine(item);
+
+            OverLoading m1 = new OverLoading("Eli", "seifi", 21);
+            TestClass m2 = new TestClass();
+            ChildTestClass m3 = new ChildTestClass();
+            // testCalss1 m4=new testCalss1();
+            m1.FullInfo();
+            m2.getName();
+            m3.getData();
+            Console.WriteLine(m1.FullInfo("fatemeh", "seifi"));
+            TestClass testt1 = new TestClass();
+            testt1.getName();
+            //MyClass. Methos Name()/Field Name in static
+            Console.WriteLine(testCalss1.Sum(100, 1));
+            //Property
+            testt1.Speed = 500;
+            Console.WriteLine(testt1.Speed);
+            //Generic
+            List<int> number = new List<int>();
+            number.Add(10);
+            number.Add(20);
+            number.Add(30);
+            number.Add(40);
+            number.Add(50);
+            foreach (int item in number)
+            {
+                // Console.WriteLine(item);
+            }
+
+            // Console.WriteLine(testt1.getSpeed(50));
+            testt1.Model = "Benz";
+            testt1.Speed1 = "100";
+            Console.WriteLine(testt1.getSpeed1);
+            var obj = new TestClass();
+            Console.WriteLine(obj);
+            MyClass1 ts = new MyClass1();
+            //partial
+            // Console.WriteLine(ts.sum(5,500));
+            // Console.WriteLine(ts.minus(5,500));
+            Ts1 testCat = new Ts1();
+            Logger Logger = new Logger();
+            testCat.getDataForCar();
+            Logger.Log("HIIII WELCOME To This Page");
+            // ts.Log("slam");
+            // Logg getData1=Logg.GetLogger();
+            // Logg getData2=Logg.GetLogger();
+            // Logg getData3=Logg.Instance;
+            Logg getData3 = Logg.Instance;
+            Logg getData4 = Logg.Instance;
+            User getData5 = new User.Builder()
+              .SetName("Elly")
+              .SetLastName("seyfi")
+              .SetAddress("...")
+              .Build();
+            Console.WriteLine(getData5.name + " " + getData5.lastName + " " + getData5.Adrress);
+            // Console.WriteLine(getData1.GetHashCode());
+            // Console.WriteLine(getData2.GetHashCode());
+            Console.WriteLine(getData3.GetHashCode());
+            Console.WriteLine(getData4.GetHashCode());
+            OldPaymentSystem oldSystem = new OldPaymentSystem();
+            INewPaymentSystem newSystem = new PaymentAdapter(oldSystem);
+            newSystem.Pay("salam", 1555);
+            News newsMsg = new News();
+            UserObserver user1 = new UserObserver("fatemeh");
+            UserObserver user2 = new UserObserver("zahra");
+            UserObserver user3 = new UserObserver("Mary");
+            newsMsg.Add(user1);
+            newsMsg.Add(user2);
+            newsMsg.Add(user3);
+            user2.Update("ok");
+            newsMsg.AddNews("received Msg");
+            Calculator calculator = new Calculator(new Addition());
+            Console.WriteLine("Add: " + calculator.Execute(10, 5));  
+
+            calculator.SetOperation(new Subtraction());
+            Console.WriteLine("Subtract: " + calculator.Execute(10, 5));
+
+            calculator.SetOperation(new Multiplication());
+            Console.WriteLine("Multiply: " + calculator.Execute(10, 5));
+
+
         }
-        
-        // Console.WriteLine(testt1.getSpeed(50));
-        testt1.Model="Benz"; 
-        testt1.Speed1="100";
-        Console.WriteLine(testt1.getSpeed1);
-        var obj = new TestClass(); 
-        Console.WriteLine(obj);
-        MyClass1 ts=new MyClass1();
-        //partial
-        // Console.WriteLine(ts.sum(5,500));
-        // Console.WriteLine(ts.minus(5,500));
-        Ts1 testCat=new Ts1();
-        Logger Logger=new Logger();
-        testCat.getDataForCar();
-        Logger.Log("HIIII WELCOME To This Page");
-        // ts.Log("slam");
-        // Logg getData1=Logg.GetLogger();
-        // Logg getData2=Logg.GetLogger();
-        // Logg getData3=Logg.Instance;
-        Logg getData3=Logg.Instance;
-        Logg getData4=Logg.Instance;
-      User getData5 = new User.Builder()
-        .SetName("Elly")
-        .SetLastName("seyfi")
-        .SetAddress("...")
-        .Build();
-        Console.WriteLine(getData5.name + " "+ getData5.lastName+" " + getData5.Adrress);
-        // Console.WriteLine(getData1.GetHashCode());
-        // Console.WriteLine(getData2.GetHashCode());
-        Console.WriteLine(getData3.GetHashCode());
-        Console.WriteLine(getData4.GetHashCode());
-        OldPaymentSystem oldSystem=new OldPaymentSystem();
-        INewPaymentSystem newSystem=new PaymentAdapter(oldSystem);
-        newSystem.Pay("salam",1555);
-        News newsMsg=new News();
-        UserObserver user1=new UserObserver("fatemeh");
-        UserObserver user2=new UserObserver("zahra");
-        UserObserver user3=new UserObserver("Mary");
-        newsMsg.Add(user1);
-        newsMsg.Add(user2);
-        newsMsg.Add(user3);
-        user2.Update("ok");
-        newsMsg.AddNews("received Msg");
-        } 
-            
+
     }
 }
-                                     
